@@ -9,7 +9,7 @@ def generate_qr_code(request):
     if request.method == 'POST':
         form = QRCodeForm(request.POST)
         if form.is_valid():
-            res_name = form.cleaned_data['restaurant_name']
+            res_name = form.cleaned_data['QR_code_name']
             url = form.cleaned_data['url']
 
             # Generate QR Code
